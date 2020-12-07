@@ -1,0 +1,530 @@
+{
+	"info": {
+		"_postman_id": "6c434888-1280-484b-a87a-2ad8bf8ca0fa",
+		"name": "SBA2Naveen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "FetchAllClerks",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9090/eloan-app/admin/all-clerks",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"eloan-app",
+								"admin",
+								"all-clerks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FetchAllManager",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9090/eloan-app/admin/all-managers",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"eloan-app",
+								"admin",
+								"all-managers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RegisterClerk",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\":\"Naveen1\",\n\t\"lastName\":\"Kumar1\",\n\t\"email\":\"test1@gmail.com\",\n\t\"mobile\":\"9087965980\",\n\t\"role\":\"Clerk\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9090/eloan-app/admin/register-clerk",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"eloan-app",
+								"admin",
+								"register-clerk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RegisterManager",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\":\"ManagerNaveen2\",\n\t\"lastName\":\"Kumar2\",\n\t\"email\":\"Mgrtest2@gmail.com\",\n\t\"mobile\":\"9087965982\",\n\t\"role\":\"Manager\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9090/eloan-app/admin/register-manager",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"eloan-app",
+								"admin",
+								"register-manager"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "RegisterCustomer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\":\"Customer3\",\n\t\"lastName\":\"Kumar3\",\n\t\"email\":\"Custtest5@gmail.com\",\n\t\"mobile\":\"8087965984\",\n\t\"role\":\"Customer\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9090/eloan-app/customer/register",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"eloan-app",
+								"customer",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ApplyLoan",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"loanName\":\"Personal Loan\",\n\t\"loanAmount\":\"40000.00\",\n\t\"loanApplicationDate\":\"12/04/2020\",\n\t\"businessStructure\":\"Individual\",\n\t\"billingIndicator\":\"Salaried\",\n    \"taxIndicator\":\"true\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9090/eloan-app/customer/apply-loan/",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"eloan-app",
+								"customer",
+								"apply-loan",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetLoanStatus",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9090/eloan-app/customer/loan-status/20",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"eloan-app",
+								"customer",
+								"loan-status",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetLoanStatusAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9090/eloan-app/customer//loan-status-all/5",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"eloan-app",
+								"customer",
+								"",
+								"loan-status-all",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Clerk",
+			"item": [
+				{
+					"name": "FetchAllCustomerOnlyApplied",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9090/eloan-app/clerk/all-applied",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"eloan-app",
+								"clerk",
+								"all-applied"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ProcessLoanClerk",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"acresOfLand\":\"10.77\",\n\t\"landValue\":\"3400000.00\",\n\t\"appraisedBy\":\"Equifax\",\n\t\"valuationDate\":\"12/03/2020\",\n\t\"addressOfProperty\":\"RYTest Address 123\",\n    \"suggestedAmountOfLoan\":\"200000.00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9090/eloan-app/clerk/process/1/6",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"eloan-app",
+								"clerk",
+								"process",
+								"1",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Manager",
+			"item": [
+				{
+					"name": "FetchAllProcessedLoan",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9090/eloan-app/manager/all-processed",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"eloan-app",
+								"manager",
+								"all-processed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RejectLoan",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"remark\":\"Fraud Documents\"\n\t\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9090/eloan-app/manager/reject-loan/3/5",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"eloan-app",
+								"manager",
+								"reject-loan",
+								"3",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SanctionLoan",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"loanAmountSanctioned\":\"30000.00\",\n    \"termOfLoan\":\"12\",\n    \"paymentStartDate\":\"12/06/2020\"\n\t\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9090/eloan-app/manager/sanction-loan/4/20",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"eloan-app",
+								"manager",
+								"sanction-loan",
+								"4",
+								"20"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
