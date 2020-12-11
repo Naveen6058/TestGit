@@ -36,7 +36,7 @@ public class CustomerController {
 		
 		return response;
 	}
-
+	//test stash
 	@PostMapping("/apply-loan/{customerId}")
 	public ResponseEntity<LoanOutputDto> applyLoan(@PathVariable Long customerId,
 												 @RequestBody LoanDto loanDto){
