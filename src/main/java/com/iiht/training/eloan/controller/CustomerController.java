@@ -36,8 +36,12 @@ public class CustomerController {
 		
 		return response;
 	}
+<<<<<<< HEAD
 	//test 1
 	
+=======
+	//test branch
+>>>>>>> testBranch
 	@PostMapping("/apply-loan/{customerId}")
 	public ResponseEntity<LoanOutputDto> applyLoan(@PathVariable Long customerId,
 												 @RequestBody LoanDto loanDto){
